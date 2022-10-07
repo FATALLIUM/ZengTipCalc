@@ -11,6 +11,7 @@ public class TipCalculator {
         double finalBill;
         double costPerPerson;
         double tipPerPerson;
+        double costPerPersonBeforeTip;
 
         System.out.println("Welcome.");
 
@@ -37,14 +38,17 @@ public class TipCalculator {
         // the m a t h
         double totalTip = totalBill * ((double) tipPercentage /100);
         finalBill = totalTip + totalBill;
-        costPerPerson = totalBill / numPeople;
+        costPerPerson = finalBill / numPeople;
         tipPerPerson = totalTip / numPeople;
+        costPerPersonBeforeTip = totalBill / numPeople;
+
 
         // rounding the money
         String formattedTotalBill = formatter.format(totalBill);
         String formattedTotalTip = formatter.format(totalTip);
         String formattedFinalBill = formatter.format(finalBill);
         String formattedCostPerPerson = formatter.format(costPerPerson);
+        String formattedCostPerPersonBeforeTip = formatter.format(costPerPersonBeforeTip);
         String formattedTipPerPerson = formatter.format(tipPerPerson);
 
         // printing information
@@ -54,6 +58,7 @@ public class TipCalculator {
         System.out.println("Your total bill with tip is: " + formattedFinalBill + ".");
         System.out.println("Per person cost before tip: " + formattedCostPerPerson + ".");
         System.out.println("Tip per person: " + formattedTipPerPerson + "." );
+        System.out.println("Per person cost after tip: " + formattedCostPerPersonBeforeTip+ ".");
         System.out.println(" ");
         System.out.println("Thanks for using (pie is god) tip calculator.");
     }
