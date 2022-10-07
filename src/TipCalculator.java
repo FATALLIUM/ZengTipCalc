@@ -56,9 +56,9 @@ public class TipCalculator {
         System.out.println("Your tip percentage is: " + tipPercentage + ".");
         System.out.println("Your total tip is: " + formattedTotalTip + ".");
         System.out.println("Your total bill with tip is: " + formattedFinalBill + ".");
-        System.out.println("Per person cost before tip: " + formattedCostPerPerson + ".");
+        System.out.println("Per person cost before tip: " + formattedCostPerPersonBeforeTip + ".");
         System.out.println("Tip per person: " + formattedTipPerPerson + "." );
-        System.out.println("Per person cost after tip: " + formattedCostPerPersonBeforeTip+ ".");
+        System.out.println("Per person cost after tip: " + formattedCostPerPerson+ ".");
         System.out.println(" ");
         System.out.println("Thanks for using (pie is god) tip calculator.");
     }
