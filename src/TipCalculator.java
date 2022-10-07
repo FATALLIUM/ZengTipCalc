@@ -29,11 +29,10 @@ public class TipCalculator {
         while (dishCost != -1) {
             System.out.println("Enter the various costs (in dollars and cents) of each dish you have ordered: ");
             dishCost = scan.nextDouble();
-            totalBill += dishCost;
+            if (dishCost != -1) {
+                totalBill += dishCost;
+            }
         }
-
-        // to undo the -1 that's added to totalBill
-        totalBill +=1;
 
         // the m a t h
         double totalTip = totalBill * ((double) tipPercentage /100);
